@@ -1,11 +1,16 @@
 import './App.css';
+// import SongList from './components/SongList';
+// import SongDetails from './components/SongDetails';
+import PostListApp from './components/Blog/PostListApp';
 
-function App() {
+const App = () => {
    return (
       <div className='mainApp'>
-         <h1>Hei</h1>
+         {/* <SongList />
+         <SongDetails /> */}
+         <PostListApp />
       </div>
    );
-}
+};
 
 export default App;
