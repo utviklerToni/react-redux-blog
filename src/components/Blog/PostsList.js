@@ -3,8 +3,6 @@ import './style.css';
 import UserHeader from './UserHeader';
 
 const PostsList = (props) => {
-   console.log(props, 'post list');
-
    return (
       <ul>
          {props.props.posts.map((singlePost) => (

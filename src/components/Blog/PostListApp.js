@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../actions';
+import { fetchPostsAndUsers } from '../../actions';
 import PostsList from './PostsList';
 
 const PostList = (props) => {
-   console.log(props, 'post list app');
-
    useEffect(() => {
       // const loadedPosts = async () => {
       //    const res = await props.fetchPosts();
       // };
       // loadedPosts();
-      props.fetchPosts();
+      props.fetchPostsAndUsers();
    }, []);
 
    return (
@@ -26,4 +24,4 @@ const mapStateToProps = (state) => {
    return { posts: state.posts };
 };
 
-export default connect(mapStateToProps, { fetchPosts })(PostList);
+export default connect(mapStateToProps, { fetchPostsAndUsers })(PostList);
